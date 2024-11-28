@@ -18,7 +18,7 @@ export default async function Home() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center space-y-8 bg-gradient-to-b from-background to-muted/20 px-4 text-center">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl pt-20 ">
           Learn. Grow.{" "}
           <span className="bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent">
             Excel.
@@ -28,8 +28,8 @@ export default async function Home() {
           Experience personalized learning paths, interactive content, and
           real-time collaboration on our modern learning platform.
         </p>
-        <div className="flex flex-col gap-4 sm:flex-row pb-48">
-          {!session ? (
+        <div className="flex flex-col gap-4 sm:flex-row pb-16 md:pb-48">
+          {session ? (
             <Button asChild size="lg">
               <Link href="/dashboard">
                 Go to Dashboard
@@ -51,7 +51,7 @@ export default async function Home() {
           )}
         </div>
         {/* Features Section */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 absolute bottom-10 px-10">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col items-center space-y-4 rounded-lg border p-6 text-center">
             <div className="rounded-full border p-4">
               <BookOpen className="h-6 w-6" />
