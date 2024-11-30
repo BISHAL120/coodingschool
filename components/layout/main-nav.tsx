@@ -18,14 +18,6 @@ const items = [
     href: "/leaderboard",
   },
   {
-    title: "Learning Paths",
-    href: "/learning-paths",
-  },
-  {
-    title: "Community",
-    href: "/community",
-  },
-  {
     title: "Chat",
     href: "/chat",
   },

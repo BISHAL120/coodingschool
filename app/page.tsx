@@ -17,41 +17,43 @@ export default async function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center space-y-8 bg-gradient-to-b from-background to-muted/20 px-4 text-center">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl pt-20 ">
-          Learn. Grow.{" "}
-          <span className="bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent">
-            Excel.
-          </span>
-        </h1>
-        <p className="mx-auto max-w-[700px] text-lg text-muted-foreground sm:text-xl">
-          Experience personalized learning paths, interactive content, and
-          real-time collaboration on our modern learning platform.
-        </p>
-        <div className="flex flex-col gap-4 sm:flex-row pb-16 md:pb-48">
-          {session ? (
-            <Button asChild size="lg">
-              <Link href="/dashboard">
-                Go to Dashboard
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          ) : (
-            <>
+      <section className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-between space-y-8 bg-gradient-to-b from-background to-muted/20 px-4 text-center">
+        <div className="flex flex-col items-center justify-end space-y-8 h-[calc(64vh)]">
+          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl pt-20 ">
+            Learn. Grow.{" "}
+            <span className="bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent">
+              Excel.
+            </span>
+          </h1>
+          <p className="mx-auto max-w-[700px] text-lg text-muted-foreground sm:text-xl">
+            Experience personalized learning paths, interactive content, and
+            real-time collaboration on our modern learning platform.
+          </p>
+          <div className="flex justify-center gap-4 sm:flex-row pb-16 md:pb-36">
+            {session ? (
               <Button asChild size="lg">
-                <Link href="/auth/signin">
-                  Get Started
+                <Link href="/dashboard">
+                  Go to Dashboard
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="/courses">Browse Courses</Link>
-              </Button>
-            </>
-          )}
+            ) : (
+              <>
+                <Button asChild size="lg">
+                  <Link href="/auth/signin">
+                    Get Started
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link href="/courses">Browse Courses</Link>
+                </Button>
+              </>
+            )}
+          </div>
         </div>
         {/* Features Section */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 pb-10">
           <div className="flex flex-col items-center space-y-4 rounded-lg border p-6 text-center">
             <div className="rounded-full border p-4">
               <BookOpen className="h-6 w-6" />
